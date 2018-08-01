@@ -1,6 +1,6 @@
 {
   "name": "@waiter/factory",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "Waiter Factory Library for Javascript",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -26,7 +26,7 @@
     "test": "npm run check && npm run coverage",
     "tslint": "tslint --project tsconfig.json -c tslint.json --exclude \"**/*.spec.ts\" \"src/**/*.ts\"",
     "prepare": "npm run clean && npm run build",
-    "preversion": "npm run clean && npm run build && npm test && npm run doc",
+    "preversion": "npm run prepare && npm test && npm run doc",
     "version": "git add -A",
     "postversion": "git push origin --tags",
     "prepublishOnly": "npm test && npm run doc"
