@@ -1,19 +1,19 @@
 /**
  * errors
  */
-import Argument from './error/argument';
-import ArgumentNull from './error/argumentNull';
-import Forbidden from './error/forbidden';
-import NotFound from './error/notFound';
-import RateLimitExceeded from './error/rateLimitExceeded';
-import ServiceUnavailable from './error/serviceUnavailable';
-import { WaiterError as Waiter } from './error/waiter';
+import ArgumentError from './error/argument';
+import ArgumentNullError from './error/argumentNull';
+import ForbiddenError from './error/forbidden';
+import NotFoundError from './error/notFound';
+import RateLimitExceededError from './error/rateLimitExceeded';
+import ServiceUnavailableError from './error/serviceUnavailable';
+import { WaiterError } from './error/waiter';
 export {
-    Argument,
-    ArgumentNull,
-    Forbidden,
-    NotFound,
-    RateLimitExceeded,
-    ServiceUnavailable,
-    Waiter
+    ArgumentError as Argument,
+    ArgumentNullError as ArgumentNull,
+    ForbiddenError as Forbidden,
+    NotFoundError as NotFound,
+    RateLimitExceededError as RateLimitExceeded,
+    ServiceUnavailableError as ServiceUnavailable,
+    WaiterError as Waiter
 };
