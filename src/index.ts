@@ -1,12 +1,12 @@
 /**
  * factory index
  */
-import ErrorCode from './factory/errorCode';
-import * as ErrorFactory from './factory/errors';
-import * as PassportFactory from './factory/passport';
-import * as RuleFactory from './factory/rule';
+import errorCode from './factory/errorCode';
+import * as errors from './factory/errors';
+import * as passport from './factory/passport';
+import * as rule from './factory/rule';
 
-export import errorCode = ErrorCode;
-export import errors = ErrorFactory;
-export import passport = PassportFactory;
-export import rule = RuleFactory;
+export import errorCode = errorCode;
+export import errors = errors;
+export import passport = passport;
+export import rule = rule;
