@@ -5,10 +5,12 @@ export interface IUnavailableHoursSpecification {
     startDate: Date;
     endDate: Date;
 }
+
 /**
  * 許可証発行規則インターフェース
  */
 export interface IRule {
+    project: { id: string };
     /**
      * 規則名称
      */
@@ -33,4 +35,13 @@ export interface IRule {
      * 発行サービスを利用できない時間帯
      */
     unavailableHoursSpecifications: IUnavailableHoursSpecification[];
+}
+
+/**
+ * 検索条件インターフェース
+ */
+export interface ISearchConditions {
+    project?: {
+        ids?: string[];
+    };
 }
