@@ -8,9 +8,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
-- 発行規則をプロジェクト単位で管理できるように対応
-- 発行規則にクライアント設定を追加
-
 ### Changed
 
 ### Deprecated
@@ -20,6 +17,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Fixed
 
 ### Security
+
+## v2.0.0 - 2018-11-29
+
+### Added
+
+- 発行規則をプロジェクト単位で管理できるように対応
+- 発行規則にクライアント設定を追加
 
 ## v1.0.0 - 2018-08-02
 
