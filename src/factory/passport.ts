@@ -1,3 +1,5 @@
+import { IProject } from './project';
+
 /**
  * 許可証発行単位
  */
@@ -23,12 +25,17 @@ export interface IIssueUnit {
      */
     numberOfRequests: number;
 }
+
 /**
  * 許可証インターフェース
  * どういうスコープに対する許可なのか、という情報を持つ。
  * 実際には許可証がjsonwebtokenに変換されて発行されるので、許可証の有効期間に関してはtokenが責任を持つことになる。
  */
 export interface IPassport {
+    /**
+     * 発行対象クライアント
+     */
+    aud?: string[];
     /**
      * 許可証のスコープ
      * 発行依頼者が事前に設定する想定
@@ -48,9 +55,14 @@ export interface IPassport {
      */
     iss: string;
     /**
+     * プロジェクト
+     */
+    project: IProject;
+    /**
      * 許可証発行単位名
      * 発行単位内で整理番号付けを行う
      */
     issueUnit: IIssueUnit;
 }
+
 export type IEncodedPassport = string;
