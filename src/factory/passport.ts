@@ -1,3 +1,5 @@
+import { IProject } from './project';
+
 /**
  * 許可証発行単位
  */
@@ -31,9 +33,9 @@ export interface IIssueUnit {
  */
 export interface IPassport {
     /**
-     * プロジェクト
+     * 発行対象クライアント
      */
-    aud: string;
+    aud?: string[];
     /**
      * 許可証のスコープ
      * 発行依頼者が事前に設定する想定
@@ -52,6 +54,10 @@ export interface IPassport {
      * @example https://waiter.example.com
      */
     iss: string;
+    /**
+     * プロジェクト
+     */
+    project: IProject;
     /**
      * 許可証発行単位名
      * 発行単位内で整理番号付けを行う

@@ -1,3 +1,9 @@
+import { IClient } from './client';
+
+export interface IProject {
+    id: string;
+}
+
 /**
  * サービス休止時間帯インターフェース
  */
@@ -10,7 +16,15 @@ export interface IUnavailableHoursSpecification {
  * 許可証発行規則インターフェース
  */
 export interface IRule {
-    project: { id: string };
+    /**
+     * プロジェクト
+     */
+    project: IProject;
+    /**
+     * スコープ使用想定クライアント
+     * 存在しなければクライアントを限定しない
+     */
+    client?: IClient[];
     /**
      * 規則名称
      */
@@ -44,4 +58,8 @@ export interface ISearchConditions {
     project?: {
         ids?: string[];
     };
+    client?: {
+        ids?: string[];
+    };
+    scopes?: string[];
 }
