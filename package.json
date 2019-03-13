@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "check": "npm run tslint && nsp check",
+    "check": "npm run tslint",
     "clean": "rimraf ./lib \"npm-debug.log*\" ./docs ./coverage ./.nyc_output",
     "doc": "echo \"implementing...\" && exit 0",
     "mocha": "mocha",
@@ -55,7 +55,6 @@
     "@types/power-assert": "^1.5.0",
     "coveralls": "^3.0.2",
     "mocha": "^5.2.0",
-    "nsp": "^3.2.1",
     "nyc": "^12.0.2",
     "power-assert": "^1.6.1",
     "rimraf": "^2.6.2",
