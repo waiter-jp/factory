@@ -1,5 +1,8 @@
 import { IClient } from './client';
 
+/**
+ * 規則の所属プロジェクトインターフェース
+ */
 export interface IProject {
     id: string;
 }
@@ -7,7 +10,7 @@ export interface IProject {
 /**
  * サービス休止時間帯インターフェース
  */
-export interface IUnavailableHoursSpecification {
+export interface IOpeningHoursSpecification {
     startDate: Date;
     endDate: Date;
 }
@@ -46,9 +49,15 @@ export interface IRule {
      */
     threshold: number;
     /**
-     * 発行サービスを利用できない時間帯
+     * 発行サービス利用可能期間リスト
+     * 値が存在すれば、ポジティブリストとして制限
      */
-    unavailableHoursSpecifications: IUnavailableHoursSpecification[];
+    availableHoursSpecifications?: IOpeningHoursSpecification[];
+    /**
+     * 発行サービス利用不可期間リスト
+     * 値が存在すれば、ネガティブリストとして制限
+     */
+    unavailableHoursSpecifications?: IOpeningHoursSpecification[];
 }
 
 /**

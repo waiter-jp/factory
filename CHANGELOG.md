@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v2.1.0 - 2019-03-15
+
+### Added
+
+- 許可証発行規則に、サービス利用可能期間リストを追加
+
 ## v2.0.0 - 2018-11-29
 
 ### Added
