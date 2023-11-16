@@ -1,12 +1,17 @@
+import { IRule } from './rule';
+
+export type IRuleInSet = Pick<
+    IRule,
+    'aggregationUnitInSeconds' | 'availableHoursSpecifications' | 'client' | 'scope' | 'threshold' | 'unavailableHoursSpecifications'
+>;
+export interface IRuleSet {
+    identifier: string;
+    hasRule: IRuleInSet[];
+}
 /**
- * プロジェクトインターフェース
+ * プロジェクト
  */
 export interface IProject {
     id: string;
-    alternateName?: string;
-    description: string;
-    email: string;
-    name: string;
-    telephone: string;
-    typeOf: 'Project';
+    hasRuleSet: IRuleSet[];
 }

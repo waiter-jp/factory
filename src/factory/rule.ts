@@ -31,11 +31,11 @@ export interface IRule {
     /**
      * 規則名称
      */
-    name: string;
+    // name: string;
     /**
      * 規則説明
      */
-    description: string;
+    // description: string;
     /**
      * スコープ
      */

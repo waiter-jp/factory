@@ -8,7 +8,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- IProjectを定義
+
 ### Changed
+
+- IRuleを最適化(delete name,description)
 
 ### Deprecated
 
