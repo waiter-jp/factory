@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Changed
 
 - IRuleを最適化(delete name,description)
+- 規則検索条件拡張
 
 ### Deprecated
 
