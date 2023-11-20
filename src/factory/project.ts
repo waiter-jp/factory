@@ -1,13 +1,5 @@
-import { IRule } from './rule';
+import { IRuleSet } from './ruleSet';
 
-export type IRuleInSet = Pick<
-    IRule,
-    'aggregationUnitInSeconds' | 'availableHoursSpecifications' | 'client' | 'scope' | 'threshold' | 'unavailableHoursSpecifications'
->;
-export interface IRuleSet {
-    identifier: string;
-    hasRule: IRuleInSet[];
-}
 /**
  * プロジェクト
  */

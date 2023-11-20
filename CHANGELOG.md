@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 - IProjectを定義
 - add UnauthorizedError
+- add IRuleSet
 
 ### Changed
 
