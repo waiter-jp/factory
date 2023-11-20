@@ -1,6 +1,6 @@
 {
   "name": "@waiter/factory",
-  "version": "2.1.0",
+  "version": "2.2.0-alpha.2",
   "description": "Waiter Factory Library for Javascript",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
