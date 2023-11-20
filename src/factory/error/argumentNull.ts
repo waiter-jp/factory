@@ -6,7 +6,7 @@ import { WaiterError } from './waiter';
 /**
  * ArgumentNullError
  */
-export default class ArgumentNullError extends WaiterError {
+export class ArgumentNullError extends WaiterError {
     public readonly argumentName: string;
 
     constructor(argumentName: string, message?: string) {

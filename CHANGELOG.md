@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 
 - IProjectを定義
+- add UnauthorizedError
 
 ### Changed
 

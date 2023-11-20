@@ -6,7 +6,7 @@ import { WaiterError } from './waiter';
 /**
  * RateLimitExceededError
  */
-export default class RateLimitExceededError extends WaiterError {
+export class RateLimitExceededError extends WaiterError {
     constructor(message?: string) {
         let actualMessage = message;
         if (message === undefined || message.length === 0) {
