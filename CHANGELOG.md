@@ -18,6 +18,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v2.2.0 - 2024-02-16
+
+### Added
+
+- IProjectを定義
+- add UnauthorizedError
+- add IRuleSet
+
+### Changed
+
+- IRuleを最適化(delete name,description)
+- 規則検索条件拡張
+
 ## v2.1.0 - 2019-03-15
 
 ### Added

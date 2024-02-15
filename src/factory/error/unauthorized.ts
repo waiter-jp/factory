@@ -4,18 +4,18 @@ import { ErrorCode } from '../errorCode';
 import { WaiterError } from './waiter';
 
 /**
- * RateLimitExceededError
+ * UnauthorizedError
  */
-export class RateLimitExceededError extends WaiterError {
+export class UnauthorizedError extends WaiterError {
     constructor(message?: string) {
         let actualMessage = message;
         if (message === undefined || message.length === 0) {
-            actualMessage = 'Rate limit exceeded.';
+            actualMessage = 'Unauthorized.';
         }
 
         // tslint:disable-next-line:no-single-line-block-comment
-        super(ErrorCode.RateLimitExceeded, actualMessage)/* istanbul ignore next */;
+        super(ErrorCode.Unauthorized, actualMessage)/* istanbul ignore next */;
 
-        setPrototypeOf(this, RateLimitExceededError.prototype);
+        setPrototypeOf(this, UnauthorizedError.prototype);
     }
 }

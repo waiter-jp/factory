@@ -1,12 +1,12 @@
 // tslint:disable-next-line:no-require-imports
 import setPrototypeOf = require('setprototypeof');
-import ErrorCode from '../errorCode';
+import { ErrorCode } from '../errorCode';
 import { WaiterError } from './waiter';
 
 /**
  * ForbiddenError
  */
-export default class ForbiddenError extends WaiterError {
+export class ForbiddenError extends WaiterError {
     constructor(message?: string) {
         let actualMessage = message;
         if (message === undefined || message.length === 0) {

@@ -1,12 +1,12 @@
 // tslint:disable-next-line:no-require-imports
 import setPrototypeOf = require('setprototypeof');
-import ErrorCode from '../errorCode';
+import { ErrorCode } from '../errorCode';
 import { WaiterError } from './waiter';
 
 /**
  * ArgumentError
  */
-export default class ArgumentError extends WaiterError {
+export class ArgumentError extends WaiterError {
     public readonly argumentName: string;
 
     constructor(argumentName: string, message?: string) {

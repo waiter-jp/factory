@@ -1,12 +1,12 @@
 // tslint:disable-next-line:no-require-imports
 import setPrototypeOf = require('setprototypeof');
-import ErrorCode from '../errorCode';
+import { ErrorCode } from '../errorCode';
 import { WaiterError } from './waiter';
 
 /**
  * NotFoundError
  */
-export default class NotFoundError extends WaiterError {
+export class NotFoundError extends WaiterError {
     public readonly entityName: string;
 
     constructor(entityName: string, message?: string) {

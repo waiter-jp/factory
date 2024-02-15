@@ -1,12 +1,9 @@
+import { IRuleSet } from './ruleSet';
+
 /**
- * プロジェクトインターフェース
+ * プロジェクト
  */
 export interface IProject {
     id: string;
-    alternateName?: string;
-    description: string;
-    email: string;
-    name: string;
-    telephone: string;
-    typeOf: 'Project';
+    hasRuleSet: IRuleSet[];
 }

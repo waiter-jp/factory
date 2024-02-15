@@ -1,14 +1,14 @@
 import { IClient } from './client';
 
 /**
- * 規則の所属プロジェクトインターフェース
+ * 規則の所属プロジェクト
  */
 export interface IProject {
     id: string;
 }
 
 /**
- * サービス休止時間帯インターフェース
+ * サービス休止時間帯
  */
 export interface IOpeningHoursSpecification {
     startDate: Date;
@@ -16,7 +16,7 @@ export interface IOpeningHoursSpecification {
 }
 
 /**
- * 許可証発行規則インターフェース
+ * 許可証発行規則
  */
 export interface IRule {
     /**
@@ -31,11 +31,11 @@ export interface IRule {
     /**
      * 規則名称
      */
-    name: string;
+    // name: string;
     /**
      * 規則説明
      */
-    description: string;
+    // description: string;
     /**
      * スコープ
      */
@@ -61,14 +61,22 @@ export interface IRule {
 }
 
 /**
- * 検索条件インターフェース
+ * 規則検索条件
  */
 export interface ISearchConditions {
     project?: {
         ids?: string[];
     };
-    client?: {
-        ids?: string[];
-    };
+    // client?: {
+    //     ids?: string[];
+    // };
     scopes?: string[];
+    scope?: {
+        $eq?: string;
+    };
+    inRuleSet?: {
+        identifier?: {
+            $eq?: string;
+        };
+    };
 }
